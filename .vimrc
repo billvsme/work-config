@@ -41,6 +41,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'vim-airline/vim-airline'
 " A tree explorer plugin for vim
 Plugin 'scrooloose/nerdtree'
+" PEP8
+Plugin 'pep8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,10 +66,10 @@ source $VIMRUNTIME/vimrc_example.vim
 "
 "==============配色, 字体========================================================
 " solarized配色方案
-"let g:solarized_termcolors=256
-"syntax enable
-"set background=dark
-"colorscheme solarized
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
 
 
 " molokai配色方案的设置
@@ -120,9 +122,24 @@ set nobackup
 
 "开启行号
 set number
-"
+
 "开启自动缩进
 set autoindent
+
+"防止shift 误操作
+command Q q
+command  Wq wq
+command WQ wq
+cnoremap Q! q!
+cnoremap Wq! wq!
+cnoremap WQ! wq!
+cnoremap WQ1 wq!
+cnoremap wq1 wq!
+cnoremap Wq1 wq!
+cnoremap wQ1 wq!
+cnoremap q1 q!
+cnoremap Q1 q!
+
 
 "自动括号
 inoremap {{ {<CR>}<Esc>O
