@@ -15,18 +15,18 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+"Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
+"Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
+"Plugin 'user/L9', {'name': 'newL9'}
 " vim-colors-solarized color theme
 Plugin 'altercation/vim-colors-solarized'
 " molokai
@@ -66,10 +66,10 @@ source $VIMRUNTIME/vimrc_example.vim
 "
 "==============配色, 字体========================================================
 " solarized配色方案
-let g:solarized_termcolors=256
-syntax enable
-set background=dark
-colorscheme solarized
+"let g:solarized_termcolors=256
+"syntax enable
+"set background=dark
+"colorscheme solarized
 
 
 " molokai配色方案的设置
@@ -125,6 +125,16 @@ set number
 
 "开启自动缩进
 set autoindent
+
+" pep8 每行79
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%80v.\+/
+
+"highlight ColorColumn ctermbg=gray
+set colorcolumn=80
+
+"let &colorcolumn=join(range(81,999),",")
+"let &colorcolumn="80,".join(range(400,999),",")
 
 "防止shift 误操作
 command Q q
