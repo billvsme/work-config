@@ -42,7 +42,12 @@ Plugin 'vim-airline/vim-airline'
 " A tree explorer plugin for vim
 Plugin 'scrooloose/nerdtree'
 " PEP8
-Plugin 'pep8'
+" Plugin 'pep8'
+" syntastic
+Plugin 'scrooloose/syntastic'
+
+" auto complete
+" Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,7 +108,7 @@ set fileencodings=usc-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr.latinl
 set nocompatible
 
 "缩进尺寸为4个空格
-set sw=4
+"set sw=4
 "
 "tab宽度为4个字符，在按tab键时，前面有东西安装ts值，如果他前面是空的会认为是缩进会按照sw的值
 set ts=4  
@@ -112,7 +117,16 @@ set ts=4
 set et
 "
 "按一次backspace就删除4个空格
-set smarttab
+"set smarttab
+
+autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ai
+autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sw=4
+autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ts=4
+autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sts=4
+autocmd FileType javascript,html,css,xml set ai
+autocmd FileType javascript,html,css,xml set sw=2
+autocmd FileType javascript,html,css,xml set ts=8
+autocmd FileType javascript,html,css,xml set sts=2
 
 "设置Paste复制键
 set pastetoggle=<F1>
@@ -168,3 +182,36 @@ set laststatus=2
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 let NERDTreeWinPos='right'
+
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers=['pep8']
+let g:syntastic_javascript_checkers = ['jscs']
+map <F2> :SyntasticCheck<CR>
+map <F3> :SyntasticReset<CR>
+
+" 复制
+" 注意vim 版本，mac 自带vim 无用
+set clipboard=unnamed
+
+" mac 自带vim可用，mac 下 pbcopy 可用复制内容到剪切板
+map "+y :w !pbcopy<CR><CR> 
+map "+p :r !pbpaste<CR><CR> 
+
+" ctrl-x for cut 
+vmap <C-x> :!pbcopy<cr> 
+" ctrl-c for copy 
+vmap <C-c> :w !pbcopy<cr><cr> 
+" ctrl-v for paste 
+" 因为ctrl-v 进入 v-block 模式
+" nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR> 
+imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR> 
