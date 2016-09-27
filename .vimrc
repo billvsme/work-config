@@ -45,6 +45,8 @@ Plugin 'scrooloose/nerdtree'
 " Plugin 'pep8'
 " syntastic
 Plugin 'scrooloose/syntastic'
+" vue.js
+Plugin 'posva/vim-vue'
 
 " auto complete
 " Plugin 'Valloric/YouCompleteMe'
@@ -108,7 +110,7 @@ set fileencodings=usc-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr.latinl
 set nocompatible
 
 "缩进尺寸为4个空格
-"set sw=4
+set sw=4
 "
 "tab宽度为4个字符，在按tab键时，前面有东西安装ts值，如果他前面是空的会认为是缩进会按照sw的值
 set ts=4  
@@ -136,6 +138,12 @@ set nobackup
 
 "开启行号
 set number
+
+"开启相对行号
+set relativenumber
+
+"高亮显示列
+set cursorcolumn
 
 "开启自动缩进
 set autoindent
@@ -195,6 +203,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers=['pep8']
+let g:syntastic_python_pep8_args='--max-line-length=100'
 let g:syntastic_javascript_checkers = ['jscs']
 map <F2> :SyntasticCheck<CR>
 map <F3> :SyntasticReset<CR>
@@ -206,6 +215,10 @@ set clipboard=unnamed
 " mac 自带vim可用，mac 下 pbcopy 可用复制内容到剪切板
 map "+y :w !pbcopy<CR><CR> 
 map "+p :r !pbpaste<CR><CR> 
+
+" fast down up
+map ∆ 10j
+map ˚ 10k
 
 " ctrl-x for cut 
 vmap <C-x> :!pbcopy<cr> 
