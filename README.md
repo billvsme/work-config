@@ -1,7 +1,7 @@
 work-config
 =============
 
-save vim, tmux config file
+save vim, tmux, zsh config file
 
 #vim
 use vundle
@@ -13,4 +13,7 @@ vim-airline
 nerdtree
 
 #tmux
+base config
+
+#zsh
 base config
