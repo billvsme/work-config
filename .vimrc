@@ -217,9 +217,12 @@ map "+y :w !pbcopy<CR><CR>
 map "+p :r !pbpaste<CR><CR> 
 
 " fast down up
-map ∆ 10j
-map ˚ 10k
+map <C-j> 10j
+map <C-k> 10k
+map <C-h> 5h
+map <C-l> 5l
 
+" see https://www.v2ex.com/t/96300
 " ctrl-x for cut 
 vmap <C-x> :!pbcopy<cr> 
 " ctrl-c for copy 
