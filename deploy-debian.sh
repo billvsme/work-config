@@ -15,6 +15,6 @@ cp config/.vimrc ~/
 cp config/.tmux.conf ~/
 cp config/.zshrc ~/
 
-vim +PluginInstall +qall
-
 chsh -s /bin/zsh
+
+vim +PluginInstall +qall
