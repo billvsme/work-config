@@ -125,10 +125,10 @@ autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ai
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sw=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ts=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sts=4
-autocmd FileType javascript,html,css,xml set ai
-autocmd FileType javascript,html,css,xml set sw=2
-autocmd FileType javascript,html,css,xml set ts=8
-autocmd FileType javascript,html,css,xml set sts=2
+autocmd FileType javascript,html,css,xml,vue set ai
+autocmd FileType javascript,html,css,xml,vue set sw=2
+autocmd FileType javascript,html,css,xml,vue set ts=8
+autocmd FileType javascript,html,css,xml,vue set sts=2
 
 "设置Paste复制键
 set pastetoggle=<F1>
