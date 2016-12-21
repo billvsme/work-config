@@ -169,6 +169,8 @@ cnoremap WQ1 wq!
 cnoremap wq1 wq!
 cnoremap Wq1 wq!
 cnoremap wQ1 wq!
+cnoremap w1 w
+cnoremap W1 w
 cnoremap q1 q!
 cnoremap Q1 q!
 
