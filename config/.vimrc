@@ -70,7 +70,13 @@ filetype plugin indent on    " required
 
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
-"
+
+set undofile
+set backup
+set swapfile
+" 指定.*.un~ 文件位置，需要事先创建好此文件夹
+"set undodir=~/.vim/.undodir
+
 "==============配色, 字体========================================================
 " solarized配色方案
 "let g:solarized_termcolors=256
@@ -179,6 +185,8 @@ cnoremap Q1 q!
 inoremap {{ {<CR>}<Esc>O
 inoremap (( ()<Esc>i
 inoremap [[ []<Esc>i
+inoremap '' ''<Esc>i
+inoremap "" ""<Esc>i
 
 " airline
 "let g:airline_theme="luna" 
