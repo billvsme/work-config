@@ -14,6 +14,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 cp config/.vimrc ~/
 cp config/.tmux.conf ~/
 cp config/.zshrc ~/
+cp config/proxychains.conf ~/.proxychains/proxychains.conf
 
 chsh -s /bin/zsh
 
