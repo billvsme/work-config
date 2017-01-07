@@ -2,6 +2,7 @@
 
 sudo yum -y install epel-release
 sudo yum -y install wget
+sudo yum -y install autossh
 sudo yum -y install git
 sudo yum -y install vim
 sudo yum -y install tmux
