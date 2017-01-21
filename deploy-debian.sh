@@ -9,6 +9,7 @@ sudo apt-get install -y tmux
 sudo apt-get install -y zsh
 
 git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
