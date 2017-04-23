@@ -214,7 +214,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--max-line-length=100'
-let g:syntastic_javascript_checkers = ['jscs']
+let g:syntastic_javascript_checkers = ['eslint']
 map <F2> :SyntasticCheck<CR>
 map <F3> :SyntasticReset<CR>
 
