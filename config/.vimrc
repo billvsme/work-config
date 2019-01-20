@@ -50,6 +50,9 @@ Plugin 'posva/vim-vue'
 
 " auto complete
 " Plugin 'Valloric/YouCompleteMe'
+" rust-lang
+Plugin 'racer-rust/vim-racer'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,9 +135,9 @@ autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sw=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set ts=4
 autocmd FileType php,python,c,java,perl,shell,bash,vim,ruby,cpp set sts=4
 autocmd FileType javascript,html,css,xml,vue set ai
-autocmd FileType javascript,html,css,xml,vue set sw=2
+autocmd FileType javascript,html,css,xml,vue set sw=4
 autocmd FileType javascript,html,css,xml,vue set ts=8
-autocmd FileType javascript,html,css,xml,vue set sts=2
+autocmd FileType javascript,html,css,xml,vue set sts=4
 
 "设置Paste复制键
 set pastetoggle=<F1>
@@ -241,3 +244,6 @@ vmap <C-c> :w !pbcopy<cr><cr>
 " 因为ctrl-v 进入 v-block 模式
 " nmap <C-v> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR> 
 imap <C-v> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR> 
+
+" rust文件识别
+autocmd BufNewFile,BufRead *.rs set filetype=rust
