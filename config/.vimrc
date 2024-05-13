@@ -88,6 +88,7 @@ set swapfile
 "colorscheme solarized
 
 
+syntax enable
 " molokai配色方案的设置
 let g:rehash256 = 1
 let g:molokai_original = 1
@@ -226,8 +227,8 @@ map <F3> :SyntasticReset<CR>
 set clipboard=unnamed
 
 " mac 自带vim可用，mac 下 pbcopy 可用复制内容到剪切板
-map "+y :w !pbcopy<CR><CR> 
-map "+p :r !pbpaste<CR><CR> 
+"map "+y :w !pbcopy<CR><CR> 
+"map "+p :r !pbpaste<CR><CR> 
 
 " fast down up
 map <C-j> 10j
